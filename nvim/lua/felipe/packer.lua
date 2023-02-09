@@ -52,4 +52,6 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
+    --Grammar checking because I can't english
+    use 'rhysd/vim-grammarous'
 end)
