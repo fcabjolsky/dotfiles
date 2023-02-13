@@ -10,6 +10,8 @@ alias startwork="tmuxinator start work"
 alias startpersonal="tmuxinator start personal"
 alias resumework="tmux attach -t work"
 source ~/.oh-my-zsh/custom/themes/powerlevel10k/powerlevel10k.zsh-theme
+source ~/.oh-my-zsh/custom/plugins/zsh-autosuggestions/zsh-autosuggestions.zsh
+bindkey -s ^f "tmux-sessionizer\n"
 
 # To customize prompt, run `p10k configure` or edit ~/.p10k.zsh.
 [[ ! -f ~/.p10k.zsh ]] || source ~/.p10k.zsh
