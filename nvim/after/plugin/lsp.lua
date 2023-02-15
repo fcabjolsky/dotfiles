@@ -3,19 +3,9 @@ lsp.preset('recommended')
 lsp.nvim_workspace()
 lsp.ensure_installed({
     'tsserver',
-    'sumneko_lua',
     'rust_analyzer',
 })
 
-lsp.configure('sumneko_lua', {
-    settings = {
-        Lua = {
-            diagnostics = {
-                globals = { 'vim' }
-            }
-        }
-    }
-})
 
 lsp.set_preferences({
     suggest_lsp_servers = false,
