@@ -46,4 +46,6 @@ return require('packer').startup(function(use)
         end
     }
     use 'nmac427/guess-indent.nvim'
+    use { 'nvim-lualine/lualine.nvim' }
+    use { 'nvim-tree/nvim-web-devicons' }
 end)
