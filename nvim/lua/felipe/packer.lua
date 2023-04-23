@@ -11,14 +11,7 @@ return require('packer').startup(function(use)
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
     }
-    use({
-        'rose-pine/neovim',
-        as = 'rose-pine',
-        config = function()
-            require("rose-pine").setup()
-            vim.cmd('colorscheme rose-pine')
-        end
-    })
+    use('doums/darcula')
     use({ 'nvim-treesitter/nvim-treesitter', { run = ':TSUpdate' } })
     use('nvim-treesitter/playground')
     use('theprimeagen/harpoon')
@@ -52,7 +45,5 @@ return require('packer').startup(function(use)
             require('Comment').setup()
         end
     }
-    --Grammar checking because I can't english
-    use 'rhysd/vim-grammarous'
     use 'nmac427/guess-indent.nvim'
 end)
