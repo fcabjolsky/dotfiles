@@ -30,16 +30,6 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 vim.keymap.set("i", "jk", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<leader>fb", "<cmd>!webpack<CR>", { desc = "Frontm Build" })
---[[ vim.keymap.set("n", "asd", function()
-    print("inside")
-    vim.fn.jobstart({ "webpack" }, {
-        stdout_buffered = true,
-        on_stdout = function(_, data)
-            --vim.api.nvim_buf_set_lines(
-        end
-    })
-end, { desc = "Frontm Build" }) ]]
 vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
@@ -56,4 +46,9 @@ vim.keymap.set("n", "<leader>vpp", "<cmd>e ~/.dotfiles/nvim/.config/nvim/lua/the
 vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader>cd", "<cmd>w !diff % -<CR>");
 vim.keymap.set("n", "<leader>gi", "<cmd>GuessIndent<CR>", {desc = "Guess Indent"});
+vim.keymap.set("n", "YY", "va{Vy", {desc = "copy function"});
+
+vim.keymap.set("n", "<leader>gp", function()
+    require("git-push").show_push_dialog()
+end, {desc = "[G]it [P]ush"})
 

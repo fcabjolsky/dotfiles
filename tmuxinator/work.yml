@@ -51,6 +51,4 @@ windows:
   - frontmjs: 
     - cd Bitbucket/frontmjs
     - clear
-  - bottests: 
-    - cd BotsTests
-    - clear
+  - extra: 

@@ -48,4 +48,7 @@ return require('packer').startup(function(use)
     use 'nmac427/guess-indent.nvim'
     use { 'nvim-lualine/lualine.nvim' }
     use { 'nvim-tree/nvim-web-devicons' }
+    use { 'MunifTanjim/nui.nvim' }
+    -- use { '~/Documents/Desa/lua/git-push/' }
+    use { 'fcabjolsky/git-push' }
 end)
