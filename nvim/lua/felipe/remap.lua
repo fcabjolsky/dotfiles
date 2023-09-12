@@ -47,8 +47,17 @@ vim.keymap.set("n", "<leader>mr", "<cmd>CellularAutomaton make_it_rain<CR>");
 vim.keymap.set("n", "<leader>cd", "<cmd>w !diff % -<CR>");
 vim.keymap.set("n", "<leader>gi", "<cmd>GuessIndent<CR>", {desc = "Guess Indent"});
 vim.keymap.set("n", "YY", "va{Vy", {desc = "copy function"});
+vim.keymap.set("n", "<leader>gwl", function ()
+   require('telescope').extensions.git_worktree.git_worktrees()
+end, {desc = "[G]it [W]ork-trees (<C-d> to delete)"});
+vim.keymap.set("n", "<leader>gwc", function ()
+   require('telescope').extensions.git_worktree.create_git_worktree()
+end, {desc = "[G]it [W]ork-trees"});
 
 vim.keymap.set("n", "<leader>gp", function()
     require("git-push").show_push_dialog()
 end, {desc = "[G]it [P]ush"})
 
+vim.keymap.set("n", "<leader>gb", function()
+    require("git-blame").blame()
+end, {desc = "[G]it [B]lame"})

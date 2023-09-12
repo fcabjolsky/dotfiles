@@ -50,5 +50,7 @@ return require('packer').startup(function(use)
     use { 'nvim-tree/nvim-web-devicons' }
     use { 'MunifTanjim/nui.nvim' }
     -- use { '~/Documents/Desa/lua/git-push/' }
+    use { 'fcabjolsky/git-blame' }
     use { 'fcabjolsky/git-push' }
+    use { 'ThePrimeagen/git-worktree.nvim' }
 end)
