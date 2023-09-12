@@ -3,7 +3,7 @@
 if [[ $# -eq 1 ]]; then
     selected=$1
 else
-    selected=$(find ~/Documents/FrontM ~/Documents/FrontM/Bitbucket ~/Documents/Desa ~/Documents/Personal/FIUBA -mindepth 1 -maxdepth 2 -type d | fzf)
+    selected=$(find ~/Documents/FrontM  ~/Documents/Desa  ~/Documents ~/.config -mindepth 1 -maxdepth 2 -type d | fzf)
 fi
 
 if [[ -z $selected ]]; then
