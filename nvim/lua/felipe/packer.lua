@@ -57,4 +57,5 @@ return require('packer').startup(function(use)
     use { 'fcabjolsky/git-blame' }
     use { 'fcabjolsky/git-push' }
     use { 'ThePrimeagen/git-worktree.nvim' }
+    use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
 end)
