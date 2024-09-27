@@ -15,5 +15,5 @@ vim.keymap.set('n', '<leader>ps', function()
     builtin.grep_string({ search = vim.fn.input("Grep > ") });
 end, { desc = "Telescope grep" })
 vim.keymap.set('n', '<leader>pps', function()
-    builtin.grep_string({ cwd = "/Users/frontm/Documents/FrontM/Bitbucket/"..vim.fn.input("Path > "), search = vim.fn.input("Grep > ") });
+    builtin.grep_string({ cwd = "/Users/fcabjolsky/Documents/FrontM/Bitbucket/"..vim.fn.input("Path > "), search = vim.fn.input("Grep > ") });
 end, { desc = "Telescope grep in work dir" })

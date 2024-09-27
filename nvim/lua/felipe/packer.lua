@@ -7,6 +7,10 @@ return require('packer').startup(function(use)
     -- Packer can manage itself
     use 'wbthomason/packer.nvim'
     use {
+        'folke/trouble.nvim',
+        requires = { { 'nvim-tree/nvim-web-devicons' } }
+    }
+    use {
         'nvim-telescope/telescope.nvim',
         -- or                            , branch = '0.1.x',
         requires = { { 'nvim-lua/plenary.nvim' } }
@@ -28,7 +32,7 @@ return require('packer').startup(function(use)
             { 'williamboman/mason.nvim' },           -- Optional
             { 'williamboman/mason-lspconfig.nvim' }, -- Optional
 
-            -- Autocompletion
+            -- Autocompleton
             { 'hrsh7th/nvim-cmp' },         -- Required
             { 'hrsh7th/cmp-nvim-lsp' },     -- Required
             { 'hrsh7th/cmp-buffer' },       -- Optional
@@ -52,10 +56,11 @@ return require('packer').startup(function(use)
     use { 'nvim-lualine/lualine.nvim' }
     use { 'nvim-tree/nvim-web-devicons' }
     use { 'MunifTanjim/nui.nvim' }
-    -- use { '~/Documents/Desa/lua/git-push/' }
+    use { '~/Documents/Desa/lua/git-push/' }
     -- use { '~/Documents/Desa/lua/git-blame' }
     use { 'fcabjolsky/git-blame' }
-    use { 'fcabjolsky/git-push' }
+    -- use { 'fcabjolsky/git-push' }
     use { 'ThePrimeagen/git-worktree.nvim' }
     use { 'codota/tabnine-nvim', run = "./dl_binaries.sh" }
+
 end)

@@ -30,7 +30,7 @@ vim.keymap.set({ "n", "v" }, "<leader>d", [["_d]])
 vim.keymap.set("i", "jk", "<Esc>")
 
 vim.keymap.set("n", "Q", "<nop>")
-vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww tmux-sessionizer<CR>")
+vim.keymap.set("n", "<C-f>", "<cmd>silent !tmux neww /opt/tmux-sessionizer<CR>")
 vim.keymap.set("n", "<leader>f", vim.lsp.buf.format)
 
 
@@ -58,6 +58,14 @@ vim.keymap.set("n", "<leader>gp", function()
     require("git-push").show_push_dialog()
 end, {desc = "[G]it [P]ush"})
 
+vim.keymap.set("n", "<leader>gP", function()
+    require("git-push").show_pull_dialog()
+end, {desc = "[G]it [P]ush"})
+
 vim.keymap.set("n", "<leader>gb", function()
     require("git-blame").blame()
 end, {desc = "[G]it [B]lame"})
+
+-- Trouble
+vim.keymap.set("n", "<leader>xw", function() require("trouble").toggle("workspace_diagnostics") end)
+vim.keymap.set("n", "<leader>xn", function() require("trouble").next({ skip_groups = true, jump = true }) end)
