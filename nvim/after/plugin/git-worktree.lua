@@ -12,15 +12,6 @@ local function file_exists(path)
   end
 end
 
-local function restart_lsp()
-  local active_clients = vim.lsp.get_active_clients()
-  for _, client in pairs(active_clients) do
-    vim.lsp.stop_client(client.id)
-  end
-  vim.cmd('edit')
-end
-
-
 Worktree.on_tree_change(function(op, metadata)
   if op == Worktree.Operations.Switch then
     require("git-push").setup()
@@ -39,10 +30,11 @@ Worktree.on_tree_change(function(op, metadata)
         end,
         on_exit = function()
           vim.defer_fn(function()
-            restart_lsp()
+            vim.cmd("LspRestart")
           end, 1)
         end,
       }):start()
     end
   end
 end)
+
